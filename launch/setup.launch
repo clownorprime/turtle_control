@@ -1,0 +1,12 @@
+<launch>
+	<rosparam file="/home/gsh/catkin_ws/src/turtle_control/config/waypoint.yaml" command="load" />
+	<arg name="width" default="20" />
+	<arg name="height" default="20" />
+	<node name="turtlesim" pkg="turtlesim"
+		type="turtlesim_node" output="screen" >
+		<param name="width" value="$(arg width)" />
+		<param name="height" value="$(arg height)" />
+	</node>
+	<node name="setup" pkg="turtle_control"
+		type="setup.py" output="screen" />
+</launch>

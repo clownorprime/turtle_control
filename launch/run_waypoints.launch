@@ -1,0 +1,11 @@
+<launch> 
+	<rosparam file="/home/gsh/catkin_ws/src/turtle_control/config/waypoint.yaml" command="load" />
+	<node name="turtlesim" pkg="turtlesim" type="turtlesim_node" 
+		output="screen" />
+	<node name="setup" pkg="turtle_control" type="setup.py" 
+		output="screen" />
+	<node name="translate" pkg="turtle_control" type="translate.py"
+		output="screen" />
+	<node name="follow" pkg="turtle_control" type="follow.py"
+		output="screen" />
+</launch>
